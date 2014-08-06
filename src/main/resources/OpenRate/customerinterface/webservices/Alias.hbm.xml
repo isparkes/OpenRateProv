@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="OpenRate.customerinterface.webservices.Alias"
+        table="ALIAS"
+    >
+      <cache usage="read-write"/>
+
+        <id
+            name="ID"
+            type="long" 
+            unsaved-value="null"
+        >
+                <!--column
+                    name="ID" 
+                    not-null="true"
+                    sql-type="long"
+                /-->
+            <generator class="increment">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-Alias.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="alias"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="alias"
+        />
+
+        <property
+            name="service"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="service"
+        />
+
+        <property
+            name="startDate"
+            type="int"
+            update="true"
+            insert="true"
+            column="startDate"
+        />
+
+        <property
+            name="endDate"
+            type="int"
+            update="true"
+            insert="true"
+            column="endDate"
+        />
+
+        <property
+            name="accountID"
+            type="long"
+            update="true"
+            insert="true"
+            column="accountID"
+        />
+
+        <property
+            name="subscriptionID"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="subscriptionID"
+        />
+
+        <property
+            name="ModT"
+            type="long"
+            update="true"
+            insert="true"
+            column="ModT"
+        />
+
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-Alias.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

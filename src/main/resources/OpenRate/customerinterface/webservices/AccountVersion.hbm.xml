@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class
+        name="OpenRate.customerinterface.webservices.AccountVersion"
+        table="ACCOUNT_VERSION"
+    >
+      <cache usage="read-write"/>
+
+        <id
+            name="accountVerID"
+            type="long" 
+            unsaved-value="null"
+        >
+                <!--column
+                    name="AccountVerID" 
+                    not-null="true"
+                    sql-type="long"
+                /-->
+                <!--generator class="org.hibernate.id.TableHiLoGenerator">
+                  <param name="table">HILO</param>
+                  <param name="column">ID_GENERATOR</param>
+                </generator-->
+            <generator class="increment">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-PriceMap.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="effectiveDate"
+            type="int"
+            update="true"
+            insert="true"
+            column="effectiveDate"
+        />
+
+        <property
+            name="startDate"
+            type="int"
+            update="true"
+            insert="true"
+            column="startDate"
+        />
+
+        <property
+            name="endDate"
+            type="int"
+            update="true"
+            insert="true"
+            column="endDate"
+        />
+
+        <property
+            name="accountID"
+            type="long"
+            update="true"
+            insert="true"
+            column="accountID"
+        />
+
+        <property
+            name="MSN"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="MSN"
+        />
+
+        <property
+            name="ModT"
+            type="long"
+            update="true"
+            insert="true"
+            column="ModT"
+        />
+
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-AccountVersion.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+</hibernate-mapping>

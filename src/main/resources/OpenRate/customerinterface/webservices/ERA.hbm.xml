@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="OpenRate.customerinterface.webservices.ERA"
+        table="E_R_A"
+    >
+      <cache usage="read-write"/>
+
+        <id
+            name="ID"
+            type="long" 
+            unsaved-value="null"
+        >
+                <!--column
+                    name="ID" 
+                    not-null="true"
+                    sql-type="long"
+                /-->
+            <generator class="increment">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-ERA.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="accountVerID"
+            type="long"
+            update="true"
+            insert="true"
+            column="accountVerID"
+        />
+
+        <property
+            name="ERAKey"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ERAKey"
+        />
+
+        <property
+            name="ERAValue"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ERAValue"
+        />
+
+        <property
+            name="accountID"
+            type="long"
+            update="true"
+            insert="true"
+            column="accountID"
+        />
+
+        <property
+            name="ModT"
+            type="long"
+            update="true"
+            insert="true"
+            column="ModT"
+        />
+
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-ERA.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>
